@@ -32,6 +32,13 @@ Robin Yuan, 88011879
 <img src="https://user-images.githubusercontent.com/68177491/110696411-e9f71780-819f-11eb-9c12-7a77bf4cf0ac.jpg" width="595" height="794"/>
 
 ------------
+### Test Result:
+
+#### Signal 1 CH1/CH2: V_Peak = 0.500V；RMS（Expected) = 0.3535V；RMS（Measured) = 0.36V
+
+<img src="https://user-images.githubusercontent.com/68177491/110696411-e9f71780-819f-11eb-9c12-7a77bf4cf0ac.jpg" width="794" height="595"/>
+
+------------
 #### This lab is sponsored by Matou Sakura
 
-<img src="https://user-images.githubusercontent.com/68177491/110687738-b4e5c780-8195-11eb-9695-f509644cab16.jpg" width="623" height="872"/>
+<img src="https://user-images.githubusercontent.com/68177491/110697183-d4ceb880-81a0-11eb-87d2-6e5c0218bbc3.jpg" width="623" height="872"/>
