@@ -10,7 +10,7 @@ void main (void)
 	float CH1RMS,CH1Zero,CH2RMS,CH2Zero;
 	char buffer [16];
 	 
-    waitms(500); // Give PuTTy a chance to start before sending
+    	waitms(500); // Give PuTTy a chance to start before sending
 	printf("\x1b[2J"); // Clear screen using ANSI escape sequence.
 	
 	
@@ -18,7 +18,8 @@ void main (void)
 	InitPinADC(2, 3); // Configure P2.3 as analog input
 	InitPinADC(2, 4); // Configure P2.4 as analog input
 	InitPinADC(2, 5); // Configure P2.5 as analog input
-    InitADC();
+	
+   	InitADC();
 	LCD_4BIT();
 	
 	while(True)
