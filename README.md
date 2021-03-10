@@ -26,6 +26,10 @@ Robin Yuan, 88011879
 #define Channel_2Peak P2_4\
 #define Channel_2Zero P2_3
 
+------------
+
+### BreadBoard Layout:
+<img src="https://user-images.githubusercontent.com/68177491/110696411-e9f71780-819f-11eb-9c12-7a77bf4cf0ac.jpg" width="595" height="794"/>
 
 ------------
 #### This lab is sponsored by Matou Sakura
