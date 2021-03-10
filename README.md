@@ -34,9 +34,12 @@ Robin Yuan, 88011879
 ------------
 ### Test Result:
 
-#### Signal 1 
+#### Signal 1: 
 CH1/CH2: V_Peak = 0.500V；RMS（Expected) = 0.3535V；RMS（Measured) = 0.36V
 <img src="https://user-images.githubusercontent.com/68177491/110697183-d4ceb880-81a0-11eb-87d2-6e5c0218bbc3.jpg" width="794" height="595"/>
+#### Signal 2:
+CH1/CH2: V_Peak = 1.900V；RMS（Expected) = 1.3435V；RMS（Measured) = 1.35V
+<img src="https://user-images.githubusercontent.com/68177491/110697416-2d05ba80-81a1-11eb-9a6f-76bacca053c5.jpg" width="595" height="794"/>
 
 ------------
 #### This lab is sponsored by Matou Sakura
