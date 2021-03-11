@@ -3,10 +3,10 @@
 #include <EFM8LB1.h>
 #include <lab.h>
 
-#define True 1
-#define False 1
-#define High 1
-#define Low  0
+#define True  1
+#define False 0
+#define High  1
+#define Low   0
 
 #define voltage_compensate 0.023
 #define sqrt2 1.41421356237
