@@ -388,3 +388,27 @@ float Ch1_Frequency()
 	Frequency=1.0/Period;
 	return Frequency;
 }
+
+float phase_Det()
+{
+	float ak = 0, ps = 0, fenn = 0;
+	TR0 = 0;
+	TMOD &= 0B_1111_0000;
+	TMOD |= 0B_0000_0001;
+	TH0 = 0; TL = 0; ak = 0;
+	TF = 0;
+
+	while (P2_2==1);
+	while (P2_2==0);
+
+	while (P2_3 != 1) {
+		if (TF0) { TF0 = 0; ak++; }
+	}
+	TR0 = 0;
+
+	ps = (ak * 0x10000L + TH0 * 0x100L + TL0) * 2L * 12 / 72000000.0;
+	fenn = Ch1_frequency();
+	per = 1 / fenn;
+	return ps / per * 360.0;
+
+}
