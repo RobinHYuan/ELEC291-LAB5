@@ -28,9 +28,6 @@ void main (void)
 		CH1RMS = (Volts_at_Pin(QFP32_MUX_P2_5)+voltage_compensate)/sqrt2;
 		CH2RMS = (Volts_at_Pin(QFP32_MUX_P2_4)+voltage_compensate)/sqrt2;
 		
-		CH1Zero = Volts_at_Pin(QFP32_MUX_P2_2);
-		CH2Zero = Volts_at_Pin(QFP32_MUX_P2_3);
-		
 		sprintf (buffer,"CH1 Peak= %.2f V",Volts_at_Pin(QFP32_MUX_P2_5) );
 		LCDprint(buffer,1,1);
 		sprintf (buffer,"CH2 Peak= %.2f V",Volts_at_Pin(QFP32_MUX_P2_4) );
