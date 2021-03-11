@@ -10,9 +10,10 @@
 
 #define voltage_compensate 0.023
 #define sqrt2 1.41421356237
+
 void main (void)
 {
-	float CH1RMS,CH1Zero,CH2RMS,CH2Zero,frequency;
+	float CH1RMS,CH1Zero,CH2RMS,CH2Zero,frequency,phase;
 	char buffer[16];
     	waitms(500); // Give PuTTy a chance to start before sending
 	printf("\x1b[2J"); // Clear screen using ANSI escape sequence.
@@ -38,6 +39,7 @@ void main (void)
 		LCDprint(buffer,1,1);
 		sprintf (buffer,"CH2 RMS= %.2f V",CH2RMS );
 		LCDprint(buffer,2,1);
+
 		
 		waitms(500);
 
@@ -46,8 +48,12 @@ void main (void)
 		sprintf (buffer,"f:%.1f HZ",frequency );
 		LCDprint(buffer,2,1);
 		waitms(1500);
+
+		phase = phase_Det();
+		sprintf(buffer, "Phase:%.1f deg", phase);
+		LCDprintf(buffer, 2, 1);
+		waitms(1500);
 	}
 	
 
 }	
-
