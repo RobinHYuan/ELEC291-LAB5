@@ -32,7 +32,7 @@ Robin Yuan, 88011879
 <img src="https://user-images.githubusercontent.com/68177491/110696411-e9f71780-819f-11eb-9c12-7a77bf4cf0ac.jpg" width="595" height="794"/>
 
 ------------
-### Test Result:
+### Past Test Result(Outdated):
 
 #### Signal 1: 
 CH1/CH2: V_Peak = 0.500V；RMS（Expected) = 0.3535V；RMS（Measured) = 0.36V
