@@ -56,6 +56,17 @@ CH1/CH2: V_Peak = 1.900V；RMS（Expected) = 1.3435V；RMS（Measured) = 1.35V
 <img src="https://user-images.githubusercontent.com/68177491/110697416-2d05ba80-81a1-11eb-9a6f-76bacca053c5.jpg" width="595" height="794"/>
 
 ------------
+
+####Video demonstrations:
+
+https://www.youtube.com/watch?v=Olm7Yfmvy40 (for frequency measurement)
+
+https://www.youtube.com/watch?v=PDNpej76NwM (for voltage amplitude measurement)
+
+https://www.youtube.com/watch?v=M9bew8Vv2B0 (for phase shift measurement)
+
+------------
+
 #### This lab is sponsored by Matou Sakura
 
 <img src="https://user-images.githubusercontent.com/68177491/110687738-b4e5c780-8195-11eb-9695-f509644cab16.jpg" width="623" height="872"/>
