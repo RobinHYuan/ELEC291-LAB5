@@ -2,7 +2,7 @@
 
 
 ### Introduction:
-In this lab, we will be using the EFM8 board, TL072, LM393P and LMC 7660 to measure the RMS voltages of any two given AC signals and the phase difference between the reference and test signals in degree.
+In this lab, we will be using the EFM8 board to measure the RMS voltages of any two given AC signals and the phase difference between the reference and test signals in degree.
 
 
 ### Team Member:
