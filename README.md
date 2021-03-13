@@ -57,7 +57,7 @@ https://www.youtube.com/watch?v=M9bew8Vv2B0 (for phase shift measurement)
 ### BreadBoard Layout:
 #### Note:
 1. The bottom two slider switches are used for changing pull-up resistance of the output pins of LM393
-2. The Slider swithces on the left is used for selecting frequency and input-protection
+2. The Slider swithces on the left is used for selecting frequency range and input-protection
 <img src="https://user-images.githubusercontent.com/68177491/111015389-63883480-835d-11eb-9c7d-8d34519ef2f0.jpg" width="595" height="794"/>
 
 
