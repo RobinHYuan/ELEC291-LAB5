@@ -9,6 +9,18 @@ In this lab, we will be using the EFM8 board, TL072, LM393P and LMC 7660 to meas
 Jerry Shao, 84982321 \
 Robin Yuan, 88011879
 
+
+------------
+
+####Video demonstrations:
+
+https://www.youtube.com/watch?v=Olm7Yfmvy40 (for frequency measurement)
+
+https://www.youtube.com/watch?v=PDNpej76NwM (for voltage amplitude measurement)
+
+https://www.youtube.com/watch?v=M9bew8Vv2B0 (for phase shift measurement)
+
+
 ------------
 
 ### Extra Features:
@@ -43,27 +55,11 @@ Robin Yuan, 88011879
 ------------
 
 ### BreadBoard Layout:
-<img src="https://user-images.githubusercontent.com/68177491/110696411-e9f71780-819f-11eb-9c12-7a77bf4cf0ac.jpg" width="595" height="794"/>
+Note:
+1. The bottom two slider switches are used for changing pull-up resustacne of the output pins of LM393
+2. The Slider swithces on the left is used for selecting frequency and input-protection.
+<img src="https://user-images.githubusercontent.com/68177491/111015389-63883480-835d-11eb-9c7d-8d34519ef2f0.jpg" width="595" height="794"/>
 
-------------
-### Past Test Result(Outdated):
-
-#### Signal 1: 
-CH1/CH2: V_Peak = 0.500V；RMS（Expected) = 0.3535V；RMS（Measured) = 0.36V
-<img src="https://user-images.githubusercontent.com/68177491/110697183-d4ceb880-81a0-11eb-87d2-6e5c0218bbc3.jpg" width="794" height="595"/>
-#### Signal 2:
-CH1/CH2: V_Peak = 1.900V；RMS（Expected) = 1.3435V；RMS（Measured) = 1.35V
-<img src="https://user-images.githubusercontent.com/68177491/110697416-2d05ba80-81a1-11eb-9a6f-76bacca053c5.jpg" width="595" height="794"/>
-
-------------
-
-####Video demonstrations:
-
-https://www.youtube.com/watch?v=Olm7Yfmvy40 (for frequency measurement)
-
-https://www.youtube.com/watch?v=PDNpej76NwM (for voltage amplitude measurement)
-
-https://www.youtube.com/watch?v=M9bew8Vv2B0 (for phase shift measurement)
 
 ------------
 
