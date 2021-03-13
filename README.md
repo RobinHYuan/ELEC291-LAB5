@@ -11,6 +11,18 @@ Robin Yuan, 88011879
 
 ------------
 
+### Extra Features:
+
+1. Portable design; No USB Connection is Needed
+2. High Frequency Measurement Range: 15Hz-60,000Hz
+3. High Voltage Measurement Range：200mV-3.2V
+4. Adjustble Pull-up Resistors Allow Us to Change the Rise Time of the LM393 Output to Get More Stable Readings
+5. Auto-backlighting circuit is used so that users can read the measurements with ease in a dark environment
+6. High Slew Rate Op-amp Used, TLE2082 gives us fatser and more accurate signal reponse at high frequencies 
+7. Input Voltage Buffer Used to Protect the Signal Generator and the Circuit
+
+------------
+
 ### PIN Assignment:
 
 #define LCD_RS P3_3\
@@ -25,12 +37,6 @@ Robin Yuan, 88011879
 #define Channel_1Zero P2_2\
 #define Channel_2Peak P2_4\
 #define Channel_2Zero P2_3
-
-------------
-### Extra Features:
-1. Portable designs; No USB Connection is Needed
-2. High Frequency Measurement Range: 15Hz-60,000Hz
-3. High Voltage Measurement Range：200mV-3.2V
 
 
 
