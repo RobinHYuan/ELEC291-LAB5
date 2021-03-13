@@ -8,19 +8,20 @@
 #define High 1
 #define Low  0
 
-#define voltage_compensate 0.032
+#define voltage_compensate 0.045
 #define sqrt2 1.41421356237
-void main (void)
+void main ()
 {
-	float CH1RMS,CH1Zero,CH2RMS,CH2Zero,frequency;
-	char buffer[16];
-        waitms(500); // Give PuTTy a chance to start before sending
+	float CH1RMS,CH1Zero,CH2RMS,CH2Zero,frequency_1,frequency_2,phase;
+	char buffer_1[16],buffer_2[16],buffer[16];
+	int state=0;
+    waitms(500); // Give PuTTy a chance to start before sending
 	printf("\x1b[2J"); // Clear screen using ANSI escape sequence.
 
 	InitPinADC(2, 4); // Configure P2.4 as analog input
 	InitPinADC(2, 5); // Configure P2.5 as analog input
 	
-        InitADC();
+    InitADC();
 	LCD_4BIT();
 	
 	while(True)
@@ -44,18 +45,35 @@ void main (void)
 		
 		waitms(500);
 
+		do
+		{	state=0;
+			frequency_1 = Ch1_Frequency();
+			sprintf (buffer_1,"f1:%.1f HZ,L",frequency_1 );		
+			frequency_2=Ch2_Frequency();
+			sprintf (buffer_2,"f2:%.1f HZ,L",frequency_2 );
+		}
+		while( (frequency_1>500 ||frequency_1/frequency_2>1.2 || frequency_1/frequency_2<0.8 )&& P3_0==1);
 		
-		frequency = Ch1_Frequency();
-		sprintf (buffer,"f1:%.1f HZ",frequency );
+		
+
+		if( P3_0==0)
+		{	do
+			{
+				frequency_1 = Ch1_Frequency();	
+				frequency_2 = Ch2_Frequency();
+			}
+			while( frequency_1/frequency_2>1.2|| frequency_1/frequency_2<0.8 );
+			
+		}	
+		
+		sprintf (buffer_2,"f:%.1f HZ,H",frequency_2 );
+		
+		phase=phase_Det(frequency_1);
+		sprintf(buffer,"Phase: %.1f\xdf", phase);
 		LCDprint(buffer,1,1);
-		
-		frequency=Ch2_Frequency();
-		sprintf (buffer,"f2:%.1f HZ",frequency );
-		LCDprint(buffer,2,1);
-		
+		LCDprint(buffer_2,2,1);	
 		waitms(1500);
 	}
 	
 
 }	
-

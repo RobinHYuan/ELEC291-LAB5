@@ -154,7 +154,7 @@ void waitms (unsigned int ms)
 		for (k=0; k<4; k++) Timer3us(250);
 }
 
-#define VDD 3.3367 // The measured value of VDD in volts
+#define VDD 3.3792 // The measured value of VDD in volts
 
 void InitPinADC (unsigned char portno, unsigned char pin_num)
 {
@@ -384,7 +384,8 @@ float Ch1_Frequency()
 	}
 	TR0=0; // Stop timer 0
 
-	Period=(myof*0x10000L+TH0*0x100L+TL0)*2L*12/72000000.0;
+	Period = (myof*65536.0+TH0*256.0+TL0)*(2.0*12.0/72.0e6);
+
 	Frequency=1.0/Period;
 	return Frequency;
 }
@@ -407,7 +408,34 @@ float Ch2_Frequency()
 	}
 	TR0=0; // Stop timer 0
 
-	Period=(myof*0x10000L+TH0*0x100L+TL0)*2L*12/72000000.0;
+	Period = (myof*65536.0+TH0*256.0+TL0)*(2.0*12.0/72.0e6);
 	Frequency=1.0/Period;
 	return Frequency;
 }
+
+float phase_Det(float fenn)
+{
+	float ak = 0, ps = 0, per=0,phase;
+	do{
+		TR0 = 0;
+		TMOD &= 0B_1111_0000;
+		TMOD |= 0B_0000_0001;
+		TH0 = 0; TL0 = 0; ak = 0;
+		TF0 = 0;
+
+		while (P2_2==1);
+		while (P2_2==0);
+		TR0=1;
+		while (P2_3 == 1) 
+			{
+			if (TF0) { TF0 = 0; ak++; }
+			}
+		TR0 = 0;
+
+		ps = (ak * 0x10000L + TH0 * 0x100L + TL0) * 2L * 12 / 72000000.0;
+		per = 1 / fenn;
+		phase=180-ps / per * 180.0;
+		if( (1>phase && phase < 0) || (phase>178 && phase <180.1) ) return 0;
+	} while (phase>181 && phase<0);
+	return phase;
+}	
